@@ -6,14 +6,14 @@
     'use strict';
 
     var WELCOME = '<div class="welcome">'
-        + '<div class="welcome-icon"><i class="bi bi-flower2"></i></div>'
-        + '<h3>Krishi Sahayak</h3>'
+        + '<div class="welcome-icon"><i class="bi bi-sun-fill"></i></div>'
+        + '<h3>AgriAssist AI</h3>'
         + '<p>Your AI agriculture assistant. Ask anything about crops, pests, soil, or share a photo for diagnosis.</p>'
         + '<div class="chips">'
-        + '<span class="chip" data-text="What is the best time to plant wheat in India?"><i class="bi bi-calendar3"></i> Wheat planting season</span>'
-        + '<span class="chip" data-text="How to control pest attack on tomato plants?"><i class="bi bi-bug"></i> Tomato pest control</span>'
-        + '<span class="chip" data-text="What fertilizer is good for paddy rice?"><i class="bi bi-droplet"></i> Paddy fertilizer</span>'
-        + '<span class="chip" data-text="Tell me about PM-KISAN scheme eligibility"><i class="bi bi-card-list"></i> PM-KISAN scheme</span>'
+        + '<span class="chip" data-text="What is the best time to plant coconut trees?"><i class="bi bi-tree"></i> Coconut planting</span>'
+        + '<span class="chip" data-text="How to control leaf folder in paddy?"><i class="bi bi-bug"></i> Paddy pest control</span>'
+        + '<span class="chip" data-text="What are the soil requirements for sugarcane?"><i class="bi bi-droplet"></i> Sugarcane soil</span>'
+        + '<span class="chip" data-text="What is the current market price of black pepper?"><i class="bi bi-currency-rupee"></i> Black pepper price</span>'
         + '</div></div>';
 
     var mediaRecorder = null, audioChunks = [], isRecording = false, isProcessing = false;
@@ -91,7 +91,7 @@
     // ── Messages ──
     function addMessage(text, type, cache, imageUrl) {
         var isUser = type === 'user';
-        var icon = isUser ? 'bi-person-fill' : 'bi-flower2';
+        var icon = isUser ? 'bi-person-fill' : 'bi-sun-fill';
         var imgTag = imageUrl ? '<img class="msg-img" src="' + imageUrl + '" alt="Shared image">' : '';
 
         if (isUser && $messages.find('.welcome').length) $messages.find('.welcome').remove();
@@ -167,7 +167,7 @@
         $audio.attr('src', src);
         $audio[0].play().catch(function() {});
         if ('Notification' in window && Notification.permission === 'granted') {
-            new Notification('Krishi Sahayak', { body: 'Voice response ready', icon: '/static/images/favicon.ico' });
+            new Notification('AgriAssist AI', { body: 'Voice response ready', icon: '/static/images/favicon.ico' });
         }
     }
 

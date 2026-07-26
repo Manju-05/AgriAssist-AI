@@ -26,14 +26,14 @@ Send a text message and receive a response.
 
 | Field    | Type   | Required | Description                                      |
 |----------|--------|----------|--------------------------------------------------|
-| `message`| string | Yes      | The user's text query related to agriculture.    |
+| `text`   | string | Yes      | The user's text query related to agriculture.    |
 
 **Example Request:**
 
 ```bash
 curl -X POST http://127.0.0.1:5000/chat \
   -H "Content-Type: application/json" \
-  -d '{"message": "What is the best time to plant wheat in India?"}'
+  -d '{"text": "What is the best time to plant wheat in India?"}'
 ```
 
 **Success Response (200 OK):**
