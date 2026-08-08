@@ -7,9 +7,7 @@
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
 [![Flask](https://img.shields.io/badge/Flask-3.1-000000?style=flat-square&logo=flask&logoColor=white)](https://flask.palletsprojects.com)
 [![Groq](https://img.shields.io/badge/Groq-LLM-F55036?style=flat-square&logo=fastapi&logoColor=white)](https://console.groq.com)
-[![License](https://img.shields.io/badge/License-MIT-22c55e?style=flat-square)](LICENSE)
-[![Deploy](https://img.shields.io/badge/Deploy-Render-41E065?style=flat-square&logo=render&logoColor=white)](https://llm-agri-bot.onrender.com)
-[![uv](https://img.shields.io/badge/uv-Package_Manager-DE5FE9?style=flat-square&logo=uv&logoColor=white)](https://docs.astral.sh/uv/)
+
 
 **Live Demo → [llm-agri-bot.onrender.com](https://llm-agri-bot.onrender.com)**
 
