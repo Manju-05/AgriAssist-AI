@@ -115,19 +115,7 @@ Copy `.env.example` to `LLM_Agri_Bot/.env` and configure:
 
 | Variable | Required | Default | Description |
 |----------|:--------:|---------|-------------|
-| `GROQ_API_KEY` | Yes | — | Your Groq API key ([get one](https://console.groq.com/keys)) |
-| `LLM_MODEL` | No | `openai/gpt-oss-120b` | Text LLM model |
-| `LLM_VISION_MODEL` | No | `meta-llama/llama-4-scout-17b-16e-instruct` | Vision LLM model |
-| `LLM_TEMPERATURE` | No | `0.3` | Model temperature (0–2) |
-| `LLM_MAX_TOKENS` | No | `2048` | Max response tokens |
-| `STT_MODEL` | No | `whisper-large-v3-turbo` | Speech-to-text model |
-| `TTS_MODEL` | No | `canopylabs/orpheus-v1-english` | Text-to-speech model |
-| `TTS_VOICE` | No | `autumn` | TTS voice name |
-| `REDIS_HOST` | No | `localhost` | Redis host (optional — falls back to memory) |
-| `REDIS_PORT` | No | `6379` | Redis port |
-| `REDIS_SSL` | No | `false` | Enable Redis SSL |
-| `FLASK_SECRET_KEY` | Yes* | `dev-secret-key` | Flask session secret (*required in production) |
-| `FLASK_DEBUG` | No | `true` | Enable debug mode |
+| `GROQ_API_KEY` | Yes | — | Your Groq API key ([get one](https://console.groq.com/keys)) 
 
 ---
 
@@ -157,7 +145,6 @@ LLM_Agri_Bot/
 ├── llms.txt                    # AI crawler disclosure
 ├── .env.example                # Environment template
 ├── gunicorn.conf.py            # Production Gunicorn config
-├── Dockerfile                  # Docker deployment
 ├── render.yaml                 # Render blueprint
 ├── run.py                      # Dev entry point
 ├── pyproject.toml              # uv / project config
@@ -177,14 +164,7 @@ LLM_Agri_Bot/
 5. Add your `GROQ_API_KEY` (and other env vars) in the Render dashboard
 6. Click **Deploy**
 
-### Docker
 
-```bash
-docker build -t krishi-sahayak .
-docker run -p 10000:10000 --env-file LLM_Agri_Bot/.env krishi-sahayak
-```
-
----
 
 ## API Reference
 
@@ -220,31 +200,5 @@ User sends message (text / image / voice)
         ▼
 Response with text + optional voice audio
 ```
-
----
-
-## Contributing
-
-Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md).
-
-```bash
-git checkout -b feature/your-feature
-uv sync
-# make changes
-git commit -m "Add your feature"
-git push origin feature/your-feature
-```
-
----
-
-## License
-
-MIT License — see [LICENSE](LICENSE)
-
----
-
-<div align="center">
-
-**Built with care for agricultural support**
 
 </div>
