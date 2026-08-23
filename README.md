@@ -190,14 +190,8 @@ LLM_Agri_Bot/
 5. Add your `GROQ_API_KEY` (and other env vars) in the Render dashboard
 6. Click **Deploy**
 
-### Docker
+-------------------
 
-```bash
-docker build -t krishi-sahayak .
-docker run -p 10000:10000 --env-file LLM_Agri_Bot/.env krishi-sahayak
-```
-
----
 
 ## API Reference
 
