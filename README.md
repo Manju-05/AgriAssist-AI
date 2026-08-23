@@ -168,7 +168,18 @@ LLM_Agri_Bot/
 
 ## Deployment
 
-### Render (Recommended)
+### Vercel (Serverless)
+
+1. Push your code to GitHub.
+2. Go to [Vercel](https://vercel.com/) → **Add New Project** and connect your repo.
+3. In the project settings, set **Root Directory** to `LLM_Agri_Bot`.
+4. Add your Environment Variables. **Crucially, you must override file paths to use Vercel's writable `/tmp` directory:**
+   - `UPLOAD_FOLDER`: `/tmp/uploads`
+   - `AUDIO_FOLDER`: `/tmp/audio`
+5. Also add `GROQ_API_KEY` and your cloud Redis credentials (`REDIS_HOST`, `REDIS_PORT`, `PASSWORD`, `REDIS_SSL=true`). *(Local Redis will not work on Vercel; use a provider like Upstash).*
+6. Click **Deploy**. Vercel will automatically detect `vercel.json` and deploy your Python application.
+
+### Render
 
 1. Push your code to GitHub
 2. Go to [render.com](https://render.com) → **New** → **Web Service**
