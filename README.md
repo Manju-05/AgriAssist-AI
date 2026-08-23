@@ -13,10 +13,6 @@
 
 An AI-powered agriculture chatbot that helps Indian farmers with crop advice, pest control, soil health, weather, and government schemes — using text, voice, and image analysis.
 
-<br/>
-
-![Krishi Sahayak — Web Interface](Sample_image/chat-interface.png)
-
 </div>
 
 ---
@@ -34,7 +30,7 @@ An AI-powered agriculture chatbot that helps Indian farmers with crop advice, pe
 | Dark/Light Theme | Glassmorphism UI with one-click theme toggle |
 | Multilingual | Responds in English, Hindi, or Hinglish |
 
-![Krishi Sahayak — Voice Chat on Mobile](Sample_image/chat-2.png)
+
 
 ---
 
