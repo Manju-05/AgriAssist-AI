@@ -1,6 +1,6 @@
 <div align="center">
 
-# Krishi Sahayak
+# AgriAssist AI
 
 ### AI Agriculture Assistant for Indian Farmers
 
@@ -17,7 +17,7 @@ An AI-powered agriculture chatbot that helps Indian farmers with crop advice, pe
 
 <br/>
 
-![Krishi Sahayak — Web Interface](Sample_image/chat-interface.png)
+![AgriAssist AI — Web Interface](Sample_image/home.png)
 
 </div>
 
@@ -36,7 +36,9 @@ An AI-powered agriculture chatbot that helps Indian farmers with crop advice, pe
 | Dark/Light Theme | Glassmorphism UI with one-click theme toggle |
 | Multilingual | Responds in English, Hindi, or Hinglish |
 
-![Krishi Sahayak — Voice Chat on Mobile](Sample_image/chat-2.png)
+![AgriAssist AI — Chat](Sample_image/chat.png)
+
+![AgriAssist AI — Image Diagnosis](Sample_image/vision.png)
 
 ---
 
