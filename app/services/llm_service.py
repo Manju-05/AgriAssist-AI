@@ -41,6 +41,9 @@ def strip_markdown(text: str) -> str:
     text = re.sub(r'^#{1,6}\s+', '', text, flags=re.MULTILINE)
     # Remove backticks: `text` → text
     text = re.sub(r'`([^`\n]+)`', r'\1', text)
+    # Remove <think> blocks (often produced by reasoning models)
+    text = re.sub(r'<think>[\s\S]*?</think>', '', text, flags=re.IGNORECASE)
+    
     # Remove triple backtick blocks
     text = re.sub(r'```[\s\S]*?```', '', text)
 

@@ -82,7 +82,7 @@ An AI-powered agriculture chatbot that helps Indian farmers with crop advice, pe
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/mohammed97ashraf/LLM_Agri_Bot.git
+git clone https://github.com/AgriAssist-AI-Team/AgriAssist-AI.git
 cd LLM_Agri_Bot
 uv sync
 ```
@@ -245,8 +245,6 @@ MIT License — see [LICENSE](LICENSE)
 
 <div align="center">
 
-**Built with care for Indian farmers**
-
-By [Mohammed Ashraf](https://www.linkedin.com/in/mohammed97ashraf) · [GitHub](https://github.com/mohammed97ashraf) · [LinkedIn](https://www.linkedin.com/in/mohammed97ashraf)
+**Built with care for agricultural support**
 
 </div>

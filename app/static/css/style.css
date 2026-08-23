@@ -73,7 +73,7 @@ body {
 }
 
 .nav-inner {
-    max-width: 940px; margin: 0 auto;
+    width: 100%;
     display: flex; align-items: center; justify-content: space-between;
     padding: 13px 22px;
 }
@@ -294,12 +294,12 @@ body {
 }
 .remove-image:hover { background: #ef4444; transform: scale(1.1); }
 
-/* ── INPUT BAR (Glass) ── */
 .input-bar {
     padding: 10px 14px 14px;
     border-top: 1px solid rgba(255,255,255,.06);
     display: flex; align-items: center; gap: 6px;
     background: rgba(255,255,255,.03);
+    margin-top: auto;
 }
 
 .icon-btn {

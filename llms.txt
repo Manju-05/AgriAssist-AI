@@ -35,7 +35,6 @@ Krishi Sahayak (meaning "Agriculture Helper") is a multilingual AI chatbot desig
 
 ## Contact
 
-- Author: Mohammed Ashraf
-- GitHub: https://github.com/mohammed97ashraf/LLM_Agri_Bot
-- LinkedIn: https://www.linkedin.com/in/mohammed97ashraf
+- Author: AgriAssist AI Team
+- GitHub: https://github.com/AgriAssist-AI/AgriAssist
 - License: MIT

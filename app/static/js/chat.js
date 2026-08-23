@@ -21,18 +21,18 @@
 
     var $messages = $('#chatMessages'), $form = $('#chatForm'), $input = $('#userInput');
     var $sendBtn = $('#sendBtn'), $voiceBtn = $('#voiceBtn'), $typing = $('#typingIndicator');
-    var $audio = $('#audioPlayer'), $clearBtn = $('#clearBtn'), $themeBtn = $('#themeToggle');
-    var $themeIcon = $('#themeIcon'), $imageBtn = $('#imageBtn'), $imageInput = $('#imageInput');
+    var $audio = $('#audioPlayer'), $clearBtn = $('#clearBtn');
+    var $imageBtn = $('#imageBtn'), $imageInput = $('#imageInput');
     var $preview = $('#imagePreview'), $previewImg = $('#previewImg'), $removeImg = $('#removeImage');
 
     // ── Init ──
     $(document).ready(function() {
-        initTheme(); showWelcome(); updateDate();
+        showWelcome(); updateDate();
         $form.on('submit', handleSend);
         $input.on('keydown', function(e) { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); $form.trigger('submit'); } });
         $voiceBtn.on('click', toggleRecording);
         $clearBtn.on('click', clearConversation);
-        $themeBtn.on('click', toggleTheme);
+
         $imageBtn.on('click', function() { $imageInput.trigger('click'); });
         $imageInput.on('change', handleImageSelect);
         $removeImg.on('click', clearImage);
@@ -41,19 +41,7 @@
         $input.trigger('focus');
     });
 
-    // ── Theme ──
-    function initTheme() {
-        if (localStorage.getItem('agri-bot-theme') === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            $themeIcon.removeClass('bi-moon-stars-fill').addClass('bi-sun-fill');
-        }
-    }
-    function toggleTheme() {
-        var dark = document.documentElement.getAttribute('data-theme') === 'dark';
-        document.documentElement[dark ? 'removeAttribute' : 'setAttribute']('data-theme', 'dark');
-        localStorage.setItem('agri-bot-theme', dark ? 'light' : 'dark');
-        $themeIcon.toggleClass('bi-moon-stars-fill bi-sun-fill');
-    }
+
 
     // ── Helpers ──
     function showWelcome() { $messages.html(WELCOME); }
@@ -91,7 +79,7 @@
     // ── Messages ──
     function addMessage(text, type, cache, imageUrl) {
         var isUser = type === 'user';
-        var icon = isUser ? 'bi-person-fill' : 'bi-sun-fill';
+        var iconHtml = isUser ? '<i class="bi bi-person-fill"></i>' : '<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V13c0-4 3-7 7-7"></path><path d="M12 22V8c0-3 2.5-5 5-5"></path><path d="M20 22v-6c0-3 1.5-5 4-5"></path></svg>';
         var imgTag = imageUrl ? '<img class="msg-img" src="' + imageUrl + '" alt="Shared image">' : '';
 
         if (isUser && $messages.find('.welcome').length) $messages.find('.welcome').remove();
@@ -102,7 +90,7 @@
         }
 
         var html = '<div class="msg ' + type + '">'
-            + '<div class="msg-av"><i class="bi ' + icon + '"></i></div>'
+            + '<div class="msg-av">' + iconHtml + '</div>'
             + '<div class="bubble">'
             + imgTag
             + '<div>' + esc(text).replace(/\n/g, '<br>') + '</div>'

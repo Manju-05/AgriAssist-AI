@@ -17,7 +17,7 @@ Examples of unacceptable behavior:
 - Other conduct which could reasonably be considered inappropriate in a professional setting
 
 ## Enforcement
-Project maintainers are responsible for clarifying and enforcing our standards. Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at [mohammed97ashraf@gmail.com]. All complaints will be reviewed and investigated promptly and fairly.
+Project maintainers are responsible for clarifying and enforcing our standards. Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at [agriassist.ai@example.com]. All complaints will be reviewed and investigated promptly and fairly.
 
 ## Attribution
 This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org), version 2.0.
